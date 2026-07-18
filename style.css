@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #111;
+  color: #eee;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#controls {
+  width: 260px;
+  flex: 0 0 260px;
+  padding: 16px;
+  overflow-y: auto;
+  background: #1a1a1a;
+  border-right: 1px solid #333;
+}
+
+#controls h1 {
+  font-size: 16px;
+  margin: 0 0 16px;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+.field label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+.field input[type="number"] {
+  width: 100%;
+  padding: 6px 8px;
+  background: #222;
+  border: 1px solid #444;
+  color: #eee;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.hint {
+  font-size: 11px;
+  color: #777;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+#resetViewBtn {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#resetViewBtn:hover {
+  background: #333;
+}
+
+#swatches {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.swatch-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.swatch-row span {
+  flex: 1;
+  color: #aaa;
+}
+
+.swatch-row input[type="color"] {
+  width: 32px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: none;
+  cursor: pointer;
+}
+
+canvas#triangleCanvas {
+  flex: 1 1 auto;
+  display: block;
+  touch-action: none;
+  cursor: grab;
+  background: #000;
+}
+
+canvas#triangleCanvas.panning {
+  cursor: grabbing;
+}

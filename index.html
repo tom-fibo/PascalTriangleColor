@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pascal's Triangle mod N</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <div id="controls">
+    <h1>Pascal's Triangle mod N</h1>
+
+    <div class="field">
+      <label for="moduloInput">Modulo</label>
+      <input type="number" id="moduloInput" min="1" max="1000" step="1" value="5">
+    </div>
+
+    <div class="field">
+      <label for="rowCountInput">Rows</label>
+      <input type="number" id="rowCountInput" min="1" max="20000" step="1" value="4096">
+      <div class="hint" id="memEstimate"></div>
+    </div>
+
+    <button id="resetViewBtn" type="button">Reset view</button>
+
+    <div class="field">
+      <label>Colors (by value mod modulo)</label>
+      <div id="swatches"></div>
+    </div>
+
+    <p class="hint">Drag to pan, scroll/pinch to zoom.</p>
+  </div>
+  <canvas id="triangleCanvas"></canvas>
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>
